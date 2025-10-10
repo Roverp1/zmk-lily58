@@ -1,3 +1,5 @@
+- [ ] make qwerty for rpd default layer
+- [ ] split lily58.keymap into separate files
 - [ ] find better deep sleep timeout
 - [ ] move F-key columns to be in sync with number keys
 - [ ] add home, end, prtscreen and etc, keys
