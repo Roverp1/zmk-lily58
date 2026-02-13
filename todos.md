@@ -3,3 +3,5 @@
 - [ ] find better deep sleep timeout
 - [ ] move F-key columns to be in sync with number keys
 - [ ] add home, end, prtscreen and etc, keys
+- [ ] increase window for double tap in tap-holds hmr's
+- [ ] increase speed for horizontal scrolling?
