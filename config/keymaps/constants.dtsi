@@ -20,8 +20,8 @@
 
 // Default timing constants for hold-tap behaviors
 #define DEFAULT_TAPPING_TERM 300
-#define DEFAULT_QUICK_TAP 170
-#define DEFAULT_PRIOR_IDLE 150
+#define DEFAULT_QUICK_TAP 175
+#define DEFAULT_PRIOR_IDLE 125
 
 #define HRM_PRIOR_IDLE_SFT 100
 
