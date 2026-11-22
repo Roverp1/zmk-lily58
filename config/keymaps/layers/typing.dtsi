@@ -1,0 +1,73 @@
+        &layer_qwerty {
+            display-name = "qwerty";
+            bindings = <
+//    ┌──────┬────────────────┬────────────────┬────────────────────┬────────────────┬──────────┐                            ┌────────────┬────────────────┬────────────────────┬────────────────┬────────────────┬──────┐
+//    │ esc  │       1        │       2        │         3          │       4        │    5     │                            │     6      │       7        │         8          │       9        │       0        │ bspc │
+//    ├──────┼────────────────┼────────────────┼────────────────────┼────────────────┼──────────┤                            ├────────────┼────────────────┼────────────────────┼────────────────┼────────────────┼──────┤
+//    │ tab  │       Q        │       W        │         E          │       R        │    T     │                            │     Y      │       U        │         I          │       O        │       P        │  [   │
+//    ├──────┼────────────────┼────────────────┼────────────────────┼────────────────┼──────────┤                            ├────────────┼────────────────┼────────────────────┼────────────────┼────────────────┼──────┤
+//    │ lsft │ &thrm_l lgui A │ &thrm_l lalt S │ &thrm_sft_l lsft D │ &thrm_l lctl F │    G     │                            │     H      │ &thrm_r rctl J │ &thrm_sft_r lsft K │ &thrm_r lalt L │ &thrm_r rgui ; │  '   │
+//    ├──────┼────────────────┼────────────────┼────────────────────┼────────────────┼──────────┼──────────────────┐   ┌─────┼────────────┼────────────────┼────────────────────┼────────────────┼────────────────┼──────┤
+//    │ lctl │       Z        │       X        │         C          │       V        │    B     │ tog GamingQWERTY │   │     │     N      │       M        │         ,          │       .        │       /        │ rsft │
+//    └──────┴────────────────┴────────────────┼────────────────────┼────────────────┼──────────┼──────────────────┤   ├─────┼────────────┼────────────────┼────────────────────┼────────────────┴────────────────┴──────┘
+//                                             │        lgui        │      lalt      │ mo LOWER │       spc        │   │ ent │ mo raltISE │      rctl      │        ralt        │
+//                                             └────────────────────┴────────────────┴──────────┴──────────────────┘   └─────┴────────────┴────────────────┴────────────────────┘
+  &kp ESC     &kp N1           &kp N2           &kp N3                &kp N4            &kp N5                                        &kp N6      &kp N7            &kp N8                &kp N9           &kp N0              &kp BSPC
+  &kp TAB     &kp Q            &kp W            &kp E                 &kp R             &kp T                                         &kp Y       &kp U             &kp I                 &kp O            &kp P               &kp LEFT_BRACKET
+  &kp LSHFT   &thrm_l LGUI A   &thrm_l LALT S   &thrm_sft_l LSHFT D   &thrm_l LCTRL F   &kp G                                         &kp H       &thrm_r RCTRL J   &thrm_sft_r LSHFT K   &thrm_r LALT L   &thrm_r RGUI SEMI   &kp SQT
+  &kp LCTRL   &kp Z            &kp X            &kp C                 &kp V             &kp B       &tog GamingQWERTY       &trans    &kp N       &kp M             &kp COMMA             &kp DOT          &kp FSLH            &kp RSHFT
+                                                &kp LGUI              &kp LALT          &mo LOWER   &kp SPACE               &kp RET   &mo RAISE   &kp RCTRL         &kp RALT
+            >;
+
+            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
+      };
+
+        &layer_qwerty_with_rpd_lower {
+            // same as qwerty but with lower_qwerty_to_rpd lower layer
+            // only used with system rpd remap
+            display-name = "qwerty with rpd lower";
+            bindings = <
+//    ┌──────┬────────────────┬────────────────┬────────────────────┬────────────────┬──────────────────┐               ┌────────────┬────────────────┬────────────────────┬────────────────┬────────────────┬──────┐
+//    │ esc  │       1        │       2        │         3          │       4        │        5         │               │     6      │       7        │         8          │       9        │       0        │ bspc │
+//    ├──────┼────────────────┼────────────────┼────────────────────┼────────────────┼──────────────────┤               ├────────────┼────────────────┼────────────────────┼────────────────┼────────────────┼──────┤
+//    │ tab  │       Q        │       W        │         E          │       R        │        T         │               │     Y      │       U        │         I          │       O        │       P        │  [   │
+//    ├──────┼────────────────┼────────────────┼────────────────────┼────────────────┼──────────────────┤               ├────────────┼────────────────┼────────────────────┼────────────────┼────────────────┼──────┤
+//    │ lsft │ &thrm_l lgui A │ &thrm_l lalt S │ &thrm_sft_l lsft D │ &thrm_l lctl F │        G         │               │     H      │ &thrm_r rctl J │ &thrm_sft_r lsft K │ &thrm_r lalt L │ &thrm_r rgui ; │  '   │
+//    ├──────┼────────────────┼────────────────┼────────────────────┼────────────────┼──────────────────┼─────┐   ┌─────┼────────────┼────────────────┼────────────────────┼────────────────┼────────────────┼──────┤
+//    │ lctl │       Z        │       X        │         C          │       V        │        B         │     │   │     │     N      │       M        │         ,          │       .        │       /        │ rsft │
+//    └──────┴────────────────┴────────────────┼────────────────────┼────────────────┼──────────────────┼─────┤   ├─────┼────────────┼────────────────┼────────────────────┼────────────────┴────────────────┴──────┘
+//                                             │        lgui        │      lalt      │ mo LowerForOsRpd │ spc │   │ ent │ mo raltISE │      rctl      │        ralt        │
+//                                             └────────────────────┴────────────────┴──────────────────┴─────┘   └─────┴────────────┴────────────────┴────────────────────┘
+  &kp ESC     &kp N1           &kp N2           &kp N3                &kp N4            &kp N5                                        &kp N6      &kp N7            &kp N8                &kp N9           &kp N0              &kp BSPC
+  &kp TAB     &kp Q            &kp W            &kp E                 &kp R             &kp T                                         &kp Y       &kp U             &kp I                 &kp O            &kp P               &kp LEFT_BRACKET
+  &kp LSHFT   &thrm_l LGUI A   &thrm_l LALT S   &thrm_sft_l LSHFT D   &thrm_l LCTRL F   &kp G                                         &kp H       &thrm_r RCTRL J   &thrm_sft_r LSHFT K   &thrm_r LALT L   &thrm_r RGUI SEMI   &kp SQT
+  &kp LCTRL   &kp Z            &kp X            &kp C                 &kp V             &kp B               &trans          &trans    &kp N       &kp M             &kp COMMA             &kp DOT          &kp FSLH            &kp RSHFT
+                                                &kp LGUI              &kp LALT          &mo LowerForOsRpd   &kp SPACE       &kp RET   &mo RAISE   &kp RCTRL         &kp RALT
+            >;
+
+            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
+      };
+
+        &layer_rpd {
+            display-name = "Real Programmers Dvorak";
+            bindings = <
+//    ┌──────┬──────────────────┬──────────────────┬────────────────────┬──────────────────┬─────────────────┐                         ┌──────────────────┬──────────────────┬────────────────────┬──────────────────┬─────────────────┬──────┐
+//    │ esc  │ &shift_1_to_plus │ &shift_2_to_lbkt │  &shift_3_to_lbrc  │ &shift_4_to_lpar │ &shift_5_to_amp │                         │ &shift_6_to_pipe │ &shift_7_to_rpar │  &shift_8_to_rbrc  │ &shift_9_to_rbkt │ &shift_0_to_ast │ bspc │
+//    ├──────┼──────────────────┼──────────────────┼────────────────────┼──────────────────┼─────────────────┤                         ├──────────────────┼──────────────────┼────────────────────┼──────────────────┼─────────────────┼──────┤
+//    │ tab  │        ;         │        ,         │         .          │        P         │        Y        │                         │        F         │        G         │         C          │        R         │        L        │  /   │
+//    ├──────┼──────────────────┼──────────────────┼────────────────────┼──────────────────┼─────────────────┤                         ├──────────────────┼──────────────────┼────────────────────┼──────────────────┼─────────────────┼──────┤
+//    │ lsft │  &thrm_l lgui A  │  &thrm_l lalt O  │ &thrm_sft_l lsft E │  &thrm_l lctl U  │        I        │                         │        D         │  &thrm_r rctl H  │ &thrm_sft_r lsft T │  &thrm_r lalt N  │ &thrm_r rgui S  │  -   │
+//    ├──────┼──────────────────┼──────────────────┼────────────────────┼──────────────────┼─────────────────┼───────────────┐   ┌─────┼──────────────────┼──────────────────┼────────────────────┼──────────────────┼─────────────────┼──────┤
+//    │ lctl │        '         │        Q         │         J          │        K         │        X        │ tog GamingRPD │   │     │        B         │        M         │         W          │        V         │        Z        │ rsft │
+//    └──────┴──────────────────┴──────────────────┼────────────────────┼──────────────────┼─────────────────┼───────────────┤   ├─────┼──────────────────┼──────────────────┼────────────────────┼──────────────────┴─────────────────┴──────┘
+//                                                 │        lgui        │       lalt       │    mo LOWER     │      spc      │   │ ent │    mo raltISE    │       rctl       │        ralt        │
+//                                                 └────────────────────┴──────────────────┴─────────────────┴───────────────┘   └─────┴──────────────────┴──────────────────┴────────────────────┘
+  &kp ESC     &shift_1_to_plus   &shift_2_to_lbkt   &shift_3_to_lbrc      &shift_4_to_lpar   &shift_5_to_amp                                  &shift_6_to_pipe   &shift_7_to_rpar   &shift_8_to_rbrc      &shift_9_to_rbkt   &shift_0_to_ast   &kp BSPC
+  &kp TAB     &kp SEMICOLON      &kp COMMA          &kp PERIOD            &kp P              &kp Y                                            &kp F              &kp G              &kp C                 &kp R              &kp L             &kp SLASH
+  &kp LSHFT   &thrm_l LGUI A     &thrm_l LALT O     &thrm_sft_l LSHFT E   &thrm_l LCTRL U    &kp I                                            &kp D              &thrm_r RCTRL H    &thrm_sft_r LSHFT T   &thrm_r LALT N     &thrm_r RGUI S    &kp MINUS
+  &kp LCTRL   &kp SQT            &kp Q              &kp J                 &kp K              &kp X             &tog GamingRPD       &trans    &kp B              &kp M              &kp W                 &kp V              &kp Z             &kp RSHFT
+                                                    &kp LGUI              &kp LALT           &mo LOWER         &kp SPACE            &kp RET   &mo RAISE          &kp RCTRL          &kp RALT
+            >;
+
+            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
+        };
